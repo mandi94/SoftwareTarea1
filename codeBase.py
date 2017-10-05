@@ -3,7 +3,7 @@
 # Tarea 2
 # Autores:
 #   - Fabiola Martinez 1310838
-#   - Amanda Camacho
+#   - Amanda Camacho 1210644
 # Descripcion: funcion que calcula el monto a pagar de un servicio.
 
 import sys

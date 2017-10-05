@@ -3,7 +3,7 @@
 # Tarea 2
 # Autores:
 #	- Fabiola Martinez 1310838
-#	- Amanda Camacho
+#	- Amanda Camacho 1210644
 # Descripcion: suite de pruebas unitarias.
 
 from codeBase import calcularServicio, finDeSemana, Tarifa
@@ -37,10 +37,10 @@ class TestSuite(unittest.TestCase):
 		self.assertEqual(calcularServicio(tarifa, [fechaInicio,fechaFin]), 10)
 
 
-	# Servicio dura 7 dias
+	# Servicio dura 7 dias mas un segundo
 	def testEsquinaSuperior(self):
 		tarifa = Tarifa(10,20)
-		fechaInicio = datetime(2017,2,20,10,00,0)
+		fechaInicio = datetime(2017,2,20,10,0,0)
 		fechaFin = datetime(2017,2,27,9,59,59)
 		self.assertEqual(calcularServicio(tarifa, [fechaInicio,fechaFin]), 2160)
 
@@ -48,16 +48,16 @@ class TestSuite(unittest.TestCase):
 	# Serivicio inicia en un mes y termina en otro
 	def testMalicia1(self):
 		tarifa = Tarifa(10,20)
-		fechaInicio = datetime(2017,9,30,10,00,0)
-		fechaFin = datetime(2017,10,2,10,00,0)
+		fechaInicio = datetime(2017,9,30,10,0,0)
+		fechaFin = datetime(2017,10,2,10,0,0)
 		self.assertEqual(calcularServicio(tarifa, [fechaInicio,fechaFin]), 860)
 
 
 	# Servicio incia en la madrugada de un dia y termina en la madrugada del otro
 	def testMalicia2(self):
 		tarifa = Tarifa(10,20)
-		fechaInicio = datetime(2017,10,1,00,00,0)
-		fechaFin = datetime(2017,10,2,00,00,0)
+		fechaInicio = datetime(2017,10,1,0,0,0)
+		fechaFin = datetime(2017,10,2,0,0,0)
 		self.assertEqual(calcularServicio(tarifa, [fechaInicio,fechaFin]), 480)
 
 
