@@ -33,7 +33,7 @@ class TestSuite(unittest.TestCase):
 	def testEsquinaInferior(self):
 		tarifa = Tarifa(10,20)
 		fechaInicio = datetime(2017,2,20,10,0,0)
-		fechaFin = datetime(2017,2,20,10,15,01)
+		fechaFin = datetime(2017,2,20,10,15,1)
 		self.assertEqual(calcularServicio(tarifa, [fechaInicio,fechaFin]), 10)
 
 
